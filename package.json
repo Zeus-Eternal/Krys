@@ -1,0 +1,65 @@
+{
+	"name": "marcia",
+	"version": "2.0.0",
+	"description": "A modern WordPress block theme built for 2025 standards with performance-first approach and premium features.",
+	"author": "Marcia Theme",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress",
+		"theme",
+		"block-theme",
+		"fse",
+		"full-site-editing",
+		"woocommerce",
+		"e-commerce"
+	],
+	"homepage": "https://github.com/Zeus-Eternal/Krys",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Zeus-Eternal/Krys.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Zeus-Eternal/Krys/issues"
+	},
+	"engines": {
+		"node": ">=18.0.0",
+		"npm": ">=9.0.0"
+	},
+	"scripts": {
+		"dev": "wp-scripts start",
+		"build": "wp-scripts build",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:css:fix": "wp-scripts lint-style --fix",
+		"lint:js": "wp-scripts lint-js",
+		"lint:js:fix": "wp-scripts lint-js --fix",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"lint": "npm run lint:css && npm run lint:js && npm run lint:pkg-json",
+		"lint:fix": "npm run lint:css:fix && npm run lint:js:fix",
+		"test": "echo \"Testing suite coming soon\" && exit 0",
+		"test:accessibility": "echo \"Accessibility testing coming soon\" && exit 0",
+		"test:performance": "echo \"Performance testing coming soon\" && exit 0",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"zip": "npm run build && zip -r marcia.zip . -x '*.git*' 'node_modules/*' '.DS_Store' 'package-lock.json' '.editorconfig' '.eslintrc.js' '.prettierrc.js'",
+		"preversion": "npm run lint && npm run build",
+		"version": "npm run build",
+		"postversion": "git push && git push --tags"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^27.9.0",
+		"@wordpress/block-editor": "^13.3.0",
+		"@wordpress/browserslist-config": "^6.3.0",
+		"autoprefixer": "^10.4.16",
+		"browserslist": "^4.22.2",
+		"cssnano": "^6.0.2",
+		"postcss": "^8.4.32",
+		"postcss-cli": "^11.0.0",
+		"sass": "^1.69.5"
+	},
+	"browserslist": [
+		"extends @wordpress/browserslist-config"
+	]
+}

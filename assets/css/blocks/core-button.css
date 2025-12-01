@@ -1,0 +1,64 @@
+/**
+ * Button Block Styles
+ *
+ * Custom styles for the core/button block.
+ *
+ * @package Marcia
+ * @since 2.0.0
+ */
+
+/* Base button styles */
+.wp-block-button__link {
+	border-radius: 0.25rem;
+	padding: 0.75rem 1.5rem;
+	font-weight: 600;
+	transition: all 0.2s ease-in-out;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.wp-block-button__link:hover {
+	transform: translateY(-1px);
+	box-shadow: var(--wp--preset--shadow--natural);
+}
+
+/* Outline button style */
+.is-style-marcia-outline .wp-block-button__link {
+	background-color: transparent !important;
+	border: 2px solid currentColor;
+	color: var(--wp--preset--color--primary) !important;
+}
+
+.is-style-marcia-outline .wp-block-button__link:hover {
+	background-color: var(--wp--preset--color--primary) !important;
+	color: var(--wp--preset--color--base) !important;
+}
+
+/* Ghost button style */
+.is-style-marcia-ghost .wp-block-button__link {
+	background-color: transparent !important;
+	border: none;
+	color: var(--wp--preset--color--primary) !important;
+	text-decoration: underline;
+	padding: 0.5rem 1rem;
+}
+
+.is-style-marcia-ghost .wp-block-button__link:hover {
+	color: var(--wp--preset--color--secondary) !important;
+	transform: none;
+	box-shadow: none;
+}
+
+/* Button focus state */
+.wp-block-button__link:focus {
+	outline: 2px solid var(--wp--preset--color--primary);
+	outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.wp-block-button__link {
+		padding: 0.625rem 1.25rem;
+		font-size: 0.9375rem;
+	}
+}

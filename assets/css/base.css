@@ -1,0 +1,191 @@
+/**
+ * Marcia Base Styles
+ *
+ * Critical base styles for the theme.
+ * Most styles are handled by theme.json.
+ *
+ * @package Marcia
+ * @since 2.0.0
+ */
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Root font size for rem calculations */
+:root {
+	font-size: 16px;
+}
+
+/* Body defaults */
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+/* Better text rendering */
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+/* Responsive images */
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Responsive videos and iframes */
+iframe,
+video,
+embed,
+object {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Remove default margins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote {
+	margin-top: 0;
+}
+
+/* Focus styles for better accessibility */
+*:focus-visible {
+	outline: 2px solid var(--wp--preset--color--primary);
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+/* Skip to content link */
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: 2.5rem;
+	z-index: 999999999;
+	text-decoration: underline;
+}
+
+.skip-link:focus {
+	display: block;
+	left: 6px;
+	top: 7px;
+	font-size: 0.875rem;
+	font-weight: 600;
+	text-decoration: none;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	z-index: 100000;
+	background-color: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--primary);
+	border: 2px solid var(--wp--preset--color--primary);
+	border-radius: 0.25rem;
+}
+
+/* WordPress alignment classes */
+.alignleft {
+	float: left;
+	margin-inline-end: var(--wp--preset--spacing--50);
+}
+
+.alignright {
+	float: right;
+	margin-inline-start: var(--wp--preset--spacing--50);
+}
+
+.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.alignfull {
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	max-width: 100vw;
+	width: 100vw;
+}
+
+.alignwide {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: var(--wp--custom--wide-size, 1280px);
+}
+
+/* Clear floats */
+.clear::before,
+.clear::after,
+.entry-content::before,
+.entry-content::after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear::after,
+.entry-content::after {
+	clear: both;
+}
+
+/* Smooth scrolling */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Print styles */
+@media print {
+	*,
+	*::before,
+	*::after {
+		background: #fff !important;
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+
+	img {
+		page-break-inside: avoid;
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+}
