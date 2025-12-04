@@ -1,0 +1,127 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60)">
+	<!-- wp:heading {"textAlign":"center","level":1,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} -->
+	<h1 class="wp-block-heading has-text-align-center" style="margin-bottom:var(--wp--preset--spacing--50)">Checkout</h1>
+	<!-- /wp:heading -->
+
+	<!-- wp:woocommerce/store-notices /-->
+
+	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"},"margin":{"bottom":"var:preset|spacing|50"}}},"backgroundColor":"info","textColor":"base","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide has-base-color has-info-background-color has-text-color has-background" style="margin-bottom:var(--wp--preset--spacing--50);padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center">🔒 <strong>Secure Checkout</strong> - Your information is encrypted and secure</p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:woocommerce/checkout -->
+	<div class="wp-block-woocommerce-checkout wc-block-checkout is-loading">
+		<!-- wp:woocommerce/checkout-fields-block -->
+		<div class="wp-block-woocommerce-checkout-fields-block">
+			<!-- wp:woocommerce/checkout-express-payment-block /-->
+
+			<!-- wp:woocommerce/checkout-contact-information-block /-->
+
+			<!-- wp:woocommerce/checkout-shipping-address-block /-->
+
+			<!-- wp:woocommerce/checkout-billing-address-block /-->
+
+			<!-- wp:woocommerce/checkout-shipping-methods-block /-->
+
+			<!-- wp:woocommerce/checkout-payment-block /-->
+
+			<!-- wp:woocommerce/checkout-additional-information-block /-->
+
+			<!-- wp:woocommerce/checkout-order-note-block /-->
+
+			<!-- wp:woocommerce/checkout-terms-block /-->
+
+			<!-- wp:woocommerce/checkout-actions-block /-->
+		</div>
+		<!-- /wp:woocommerce/checkout-fields-block -->
+
+		<!-- wp:woocommerce/checkout-totals-block -->
+		<div class="wp-block-woocommerce-checkout-totals-block">
+			<!-- wp:woocommerce/checkout-order-summary-block /-->
+		</div>
+		<!-- /wp:woocommerce/checkout-totals-block -->
+	</div>
+	<!-- /wp:woocommerce/checkout -->
+
+	<!-- wp:separator {"style":{"spacing":{"margin":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}}} -->
+	<hr class="wp-block-separator has-alpha-channel-opacity" style="margin-top:var(--wp--preset--spacing--70);margin-bottom:var(--wp--preset--spacing--70)"/>
+	<!-- /wp:separator -->
+
+	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|50","left":"var:preset|spacing|50"}}}} -->
+	<div class="wp-block-columns alignwide">
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}}},"backgroundColor":"gray-50","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group has-gray-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
+				<h3 class="wp-block-heading has-text-align-center has-medium-font-size">🚚 Free Shipping</h3>
+				<!-- /wp:heading -->
+
+				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
+				<p class="has-text-align-center has-small-font-size">On orders over $50</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}}},"backgroundColor":"gray-50","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group has-gray-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
+				<h3 class="wp-block-heading has-text-align-center has-medium-font-size">🔒 Secure Payment</h3>
+				<!-- /wp:heading -->
+
+				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
+				<p class="has-text-align-center has-small-font-size">SSL encrypted checkout</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}}},"backgroundColor":"gray-50","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group has-gray-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
+				<h3 class="wp-block-heading has-text-align-center has-medium-font-size">↩️ Easy Returns</h3>
+				<!-- /wp:heading -->
+
+				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
+				<p class="has-text-align-center has-small-font-size">30-day money back</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}}},"backgroundColor":"gray-50","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group has-gray-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
+				<h3 class="wp-block-heading has-text-align-center has-medium-font-size">💬 Support</h3>
+				<!-- /wp:heading -->
+
+				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
+				<p class="has-text-align-center has-small-font-size">24/7 customer service</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:column -->
+	</div>
+	<!-- /wp:columns -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

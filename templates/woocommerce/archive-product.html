@@ -1,0 +1,99 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60)">
+	<!-- wp:woocommerce/store-notices /-->
+
+	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} -->
+	<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--50)">
+		<!-- wp:query-title {"type":"archive","showPrefix":false,"level":1} /-->
+
+		<!-- wp:woocommerce/catalog-sorting /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:term-description /-->
+
+	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} -->
+	<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--50)">
+		<!-- wp:woocommerce/filter-wrapper {"filterType":"active-filters"} -->
+		<div class="wp-block-woocommerce-filter-wrapper">
+			<!-- wp:woocommerce/active-filters {"displayStyle":"chips","heading":"Active filters"} /-->
+		</div>
+		<!-- /wp:woocommerce/filter-wrapper -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|50","left":"var:preset|spacing|50"}}}} -->
+	<div class="wp-block-columns">
+		<!-- wp:column {"width":"25%"} -->
+		<div class="wp-block-column" style="flex-basis:25%">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}},"border":{"width":"1px","color":"var:preset|color|gray-200","radius":"0.5rem"}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group" style="border-color:var(--wp--preset--color--gray-200);border-width:1px;border-radius:0.5rem;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:heading {"level":3,"fontSize":"medium"} -->
+				<h3 class="wp-block-heading has-medium-font-size">Filters</h3>
+				<!-- /wp:heading -->
+
+				<!-- wp:woocommerce/filter-wrapper {"filterType":"price-filter"} -->
+				<div class="wp-block-woocommerce-filter-wrapper">
+					<!-- wp:heading {"level":4,"fontSize":"medium"} -->
+					<h4 class="wp-block-heading has-medium-font-size">Price</h4>
+					<!-- /wp:heading -->
+
+					<!-- wp:woocommerce/price-filter {"heading":"Filter by price","showInputFields":false} /-->
+				</div>
+				<!-- /wp:woocommerce/filter-wrapper -->
+
+				<!-- wp:woocommerce/filter-wrapper {"filterType":"attribute-filter"} -->
+				<div class="wp-block-woocommerce-filter-wrapper">
+					<!-- wp:heading {"level":4,"fontSize":"medium"} -->
+					<h4 class="wp-block-heading has-medium-font-size">Categories</h4>
+					<!-- /wp:heading -->
+
+					<!-- wp:woocommerce/product-categories /-->
+				</div>
+				<!-- /wp:woocommerce/filter-wrapper -->
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"width":"75%"} -->
+		<div class="wp-block-column" style="flex-basis:75%">
+			<!-- wp:woocommerce/product-collection {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":true,"taxQuery":{},"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[]},"tagName":"div","displayLayout":{"type":"flex","columns":3,"shrinkColumns":true},"collection":"woocommerce/product-collection/product-catalog"} -->
+			<div class="wp-block-woocommerce-product-collection">
+				<!-- wp:woocommerce/product-template -->
+					<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|30"},"border":{"width":"1px","color":"var:preset|color|gray-200","radius":"0.5rem"}},"layout":{"type":"default"}} -->
+					<div class="wp-block-group" style="border-color:var(--wp--preset--color--gray-200);border-width:1px;border-radius:0.5rem;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+						<!-- wp:woocommerce/product-image {"isDescendentOfQueryLoop":true,"style":{"border":{"radius":"0.25rem"}}} /-->
+
+						<!-- wp:post-title {"textAlign":"left","level":3,"isLink":true,"style":{"spacing":{"margin":{"top":"var:preset|spacing|30"}}},"fontSize":"medium","__woocommerceNamespace":"woocommerce/product-collection/product-title"} /-->
+
+						<!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"textAlign":"left","fontSize":"large","style":{"spacing":{"margin":{"top":"var:preset|spacing|30"}}}} /-->
+
+						<!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true,"textAlign":"center","width":100,"style":{"spacing":{"margin":{"top":"var:preset|spacing|30"}}}} /-->
+					</div>
+					<!-- /wp:group -->
+				<!-- /wp:woocommerce/product-template -->
+
+				<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}}} -->
+					<!-- wp:query-pagination-previous /-->
+					<!-- wp:query-pagination-numbers /-->
+					<!-- wp:query-pagination-next /-->
+				<!-- /wp:query-pagination -->
+
+				<!-- wp:query-no-results -->
+					<!-- wp:paragraph {"align":"center"} -->
+					<p class="has-text-align-center">No products found.</p>
+					<!-- /wp:paragraph -->
+				<!-- /wp:query-no-results -->
+			</div>
+			<!-- /wp:woocommerce/product-collection -->
+		</div>
+		<!-- /wp:column -->
+	</div>
+	<!-- /wp:columns -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

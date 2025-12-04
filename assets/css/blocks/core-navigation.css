@@ -1,0 +1,99 @@
+/**
+ * Navigation Block Styles
+ *
+ * Custom styles for the core/navigation block.
+ *
+ * @package Marcia
+ * @since 2.0.0
+ */
+
+/* Navigation container */
+.wp-block-navigation {
+	font-weight: 500;
+}
+
+/* Navigation links */
+.wp-block-navigation-item a {
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+}
+
+.wp-block-navigation-item a:hover,
+.wp-block-navigation-item a:focus {
+	color: var(--wp--preset--color--primary);
+}
+
+/* Active/current menu item */
+.wp-block-navigation-item.current-menu-item > a,
+.wp-block-navigation-item.current_page_item > a {
+	color: var(--wp--preset--color--primary);
+	font-weight: 600;
+}
+
+/* Submenu styles */
+.wp-block-navigation__submenu-container {
+	background-color: var(--wp--preset--color--base);
+	border: 1px solid var(--wp--preset--color--gray-200);
+	box-shadow: var(--wp--preset--shadow--natural);
+	border-radius: 0.25rem;
+	padding: 0.5rem 0;
+}
+
+.wp-block-navigation__submenu-container .wp-block-navigation-item a {
+	padding: 0.5rem 1rem;
+}
+
+/* Mobile menu */
+.wp-block-navigation__responsive-container.is-menu-open {
+	background-color: var(--wp--preset--color--base);
+}
+
+.wp-block-navigation__responsive-container-open {
+	background-color: transparent;
+	border: 2px solid var(--wp--preset--color--contrast);
+	border-radius: 0.25rem;
+	padding: 0.5rem;
+}
+
+.wp-block-navigation__responsive-container-close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+/* Mobile menu items */
+@media (max-width: 599px) {
+	.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__responsive-container-content {
+		display: none;
+	}
+
+	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item {
+		padding: 0.5rem 0;
+	}
+}
+
+/* Tablet and up */
+@media (min-width: 600px) {
+	.wp-block-navigation__responsive-container-open {
+		display: none;
+	}
+
+	.wp-block-navigation__responsive-container-close {
+		display: none;
+	}
+}
+
+/* Focus styles for accessibility */
+.wp-block-navigation-item a:focus {
+	outline: 2px solid var(--wp--preset--color--primary);
+	outline-offset: 2px;
+}
+
+/* Dropdown icon */
+.wp-block-navigation-item__dropdown-indicator {
+	transition: transform 0.2s ease-in-out;
+}
+
+.wp-block-navigation-item:hover .wp-block-navigation-item__dropdown-indicator {
+	transform: rotate(180deg);
+}
